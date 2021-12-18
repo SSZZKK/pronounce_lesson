@@ -5,5 +5,5 @@ class Admin < ApplicationRecord
 
  has_secure_password
  
- has_many :posts
+ has_many :uploads
 end

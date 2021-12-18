@@ -1,4 +1,4 @@
-class Post < ApplicationRecord
+class Upload < ApplicationRecord
   validates :admin_id, presence: true
   validates :description, presence: true
   validates :content, presence: true

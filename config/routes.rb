@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
+  get 'uploads/new'
   get 'sessions/new'
-  get 'pages/index'
+  get 'pages/new'
   root 'pages#index'
   
   resources :admins
@@ -10,5 +11,5 @@ Rails.application.routes.draw do
   delete '/logout',  to: 'sessions#destroy'
   
   resources :admins
-  resources :posts
+  resources :uploads
 end
