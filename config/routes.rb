@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'uploads/new'
   get 'sessions/new'
   get 'pages/new'
-  root 'pages#index'
+  root 'uploads#new'
   
   resources :admins
   
