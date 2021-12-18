@@ -1,0 +1,123 @@
+h1, h2 {
+  font-weight: 20;
+}
+
+.text-black {
+  color: #000;
+}
+
+.btn-black {
+  color: #000;
+  border: 1px solid #fff;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  font-size: 100px;
+  background-color: rgba(0,0,0,0.5);
+
+  &:hover {
+    color: #000;
+  }
+}
+
+.top-hero-wrapper {
+  width: 800vw;
+  height: 400vh;
+}
+
+
+.top-hero-container {
+  padding-top: 100px;
+  h1 {
+    font-size: 100px;
+    margin-bottom: 40px;
+  }
+
+  h2 {
+    margin-bottom: 80px;
+  }
+}
+
+.nagareru {
+margin : 0 auto 40px;
+width : 100%;
+font-size : 28px;
+text-align : center;
+overflow : hidden;
+}
+
+.nagareru p{
+margin:0;
+display : inline-block;
+padding-left: 100%;
+white-space : nowrap;
+line-height : 1em;
+animation : scrollSample01 10s linear infinite;
+}
+@keyframes scrollSample01{
+0% { transform: translateX(0)}
+100% { transform: translateX(-100%)}
+}
+
+
+.buruburu {
+    display: inline-block;
+    animation: furueru .1s  infinite;
+}
+
+@keyframes furueru {
+    0% {transform: translate(0px, 0px) rotateZ(0deg)}
+    25% {transform: translate(2px, 2px) rotateZ(1deg)}
+    50% {transform: translate(0px, 2px) rotateZ(0deg)}
+    75% {transform: translate(2px, 0px) rotateZ(-1deg)}
+    100% {transform: translate(0px, 0px) rotateZ(0deg)}
+}
+
+.font-default {
+  font-family: 'DotGothic16', sans-serif;
+}
+
+
+.title_letter {
+  display        : inline-block;
+  color          : #fff; 
+  font-size      : 70pt;
+  letter-spacing : 5px; 
+  text-shadow    : 
+       8px  8px 1px #0066FF,
+      -8px  8px 1px #0066FF,
+       8px -8px 1px #0066FF,
+      -8px -8px 1px #0066FF,
+       8px  0px 1px #0066FF,
+       0px  8px 1px #0066FF,
+      -8px  0px 1px #0066FF,
+       0px -8px 1px #0066FF;        /* 文字の影 */
+}
+
+.multi-bg {
+  width: 100%;
+  height: 800px;
+  background-image: url(pz.png),
+  url(pnd.png);
+  background-repeat: no-repeat,
+  no-repeat;
+  background-position: 1000px 300px,200px 10px;
+    }    
+    
+.weak-bg {
+  height: 100%;
+  background: rgba(255,255,255,0.7);
+}
+
+.outline-box {
+    padding: 20px 10px;
+    margin: 20px 10px 10px 20px;
+    font-weight: bold;
+    color: #0066FF;
+    background: #FFF;
+    border: solid 10px #0066FF;
+    border-radius: 50px;
+}
+.outline-box p {
+    margin: 10px 5px 10px 5px; 
+    padding: 0;
+}
