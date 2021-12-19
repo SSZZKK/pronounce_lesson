@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   get 'contents/new'
-  get 'uploads/new'
   get 'sessions/new'
   get 'pages/new'
   root 'pages#index'
