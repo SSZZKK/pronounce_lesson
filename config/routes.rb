@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
+  get 'contents/new'
   get 'uploads/new'
   get 'sessions/new'
   get 'pages/new'
-  root 'uploads#new'
+  root 'pages#index'
   
-  resources :admins
   
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
   
   resources :admins
-  resources :uploads
+  resources :contents
 end

@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     admin = Admin.find_by(admin_id: params[:session][:admin_id])
     if admin && admin.authenticate(params[:session][:password])
       log_in admin
-      redirect_to , success: '管理画面に入りました'
+      redirect_to new_content_path, success: '管理画面に入りました'
     else
       flash.now[:danger] = 'ログイン失敗'
       render :new
