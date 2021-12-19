@@ -1,0 +1,19 @@
+<div class="topic-index-wrapper">
+  <div class="container">
+    <% @contents.each do |content| %>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <div class="content-index-single">
+            <h2 class="content-author">
+              <%= content.admin.admin_name %>
+            </h2>
+            <%= video_tag content.video.url %>
+            <p class="content-text">
+              <%= content.description %>
+            </p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

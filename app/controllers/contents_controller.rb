@@ -1,6 +1,10 @@
 class ContentsController < ApplicationController
+  def index
+    @content = Content.all
+  end
+  
   def new
-  @content = Content.new
+    @content = Content.new
   end
 
   def create
@@ -9,7 +13,7 @@ class ContentsController < ApplicationController
     if @content.save
       redirect_to contents_path, success: '投稿しました'
     else
-      flash.now[:danger] = "投稿できませんでした"
+      flash.now[:danger] = "投稿失敗"
       render :new
     end
   end
