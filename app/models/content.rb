@@ -8,5 +8,6 @@ class Content < ApplicationRecord
   
   belongs_to :admin
   
+  
   mount_uploader :video, VideoUploader
 end

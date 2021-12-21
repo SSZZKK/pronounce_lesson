@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get 'sessions/new'
   get 'pages/new'
   root 'pages#index'
+  get 'contents/mydata'
+  get 'search', to: 'contents#mydata'
   
   
   get    '/login',   to: 'sessions#new'
@@ -11,4 +13,5 @@ Rails.application.routes.draw do
   
   resources :admins
   resources :contents
+  
 end
