@@ -1,19 +1,20 @@
-<div class="content-index-wrapper">
-  <div class="container">
+<div class="outline-box font-default" >
+ <div class="top-hero-container">
     <% @contents.each do |content| %>
       <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-          <div class="content-index-single">
-
-
-            <%= video_tag content.video.url %>
-            
-            <p class="content-text">
+        
+            <p class="content-text font-size:large titleindent">
               <%= content.description %>
             </p>
-          </div>
+        
+        <div class="content-index-single">
+         <div class="Videolayout">
+          <%= video_tag content.video.url, size: "500x300", controls: true, muted: false %>
+         </div>
+            
         </div>
       </div>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
+ </div>
 </div>

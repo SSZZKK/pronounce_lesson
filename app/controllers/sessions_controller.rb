@@ -20,11 +20,11 @@ class SessionsController < ApplicationController
 
   private
   def log_in(admin)
-    session[:admin_name_id] = admin.id
+    session[:admin_id] = admin.id
   end
   
   def log_out
-    session.delete(:admin_name_id)
+    session.delete(:admin_id)
     @current_admin = nil
   end
 end

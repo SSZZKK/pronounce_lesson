@@ -18,8 +18,12 @@ class ContentsController < ApplicationController
     end
   end
 
+  def edit
+   @content = Content.find(params[:id])
+  end
+  
   private
   def content_params
-    params.require(:content).permit(:video, :description)
+    params.require(:content).permit(:video, :description, :language)
   end
 end

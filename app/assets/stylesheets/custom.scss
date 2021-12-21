@@ -104,7 +104,8 @@ animation : scrollSample01 10s linear infinite;
 
 .outline-box {
     padding: 20px 10px;
-    margin: 10px 1px 20px 20px;
+    margin: 10px 20px 20px;
+    position: relative;
     font-weight: bold;
     color: #1E90FF;
     background: #FFF;
@@ -117,4 +118,13 @@ animation : scrollSample01 10s linear infinite;
     padding: 0;
 }
 
+.Videolayout{
+  text-align: center;
+}
+
+
+.titleindent
+      {
+         text-indent: 1em;
+      }
 
