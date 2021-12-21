@@ -1,14 +1,12 @@
 class ContentsController < ApplicationController
-  
-  before_action :set_q, only: [:index, :search]
 
   def index
     @contents = Content.all
-    @content = Content.new
-   end
+  end
     
   def search
-    @results = @q.result(distinct: true)
+    @search = Content.ransack(params[:q])
+    @results = @search.result
   end
   
   def new
@@ -29,9 +27,5 @@ class ContentsController < ApplicationController
   private
   def content_params
     params.require(:content).permit(:video, :description, :language)
-  end
-  
-  def set_q
-      @q = Post.ransack(params[:q])
   end
 end

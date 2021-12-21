@@ -30,11 +30,6 @@ ActiveRecord::Schema.define(version: 2021_12_21_155649) do
     t.string "subject"
   end
 
-  create_table "titles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "uploads", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "admin_id"
     t.string "description"

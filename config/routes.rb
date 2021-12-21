@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   get 'pages/new'
   root 'pages#index'
   get 'contents/mydata'
-  get 'search', to: 'contents#mydata'
   
   
   get    '/login',   to: 'sessions#new'

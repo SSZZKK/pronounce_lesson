@@ -1,17 +1,5 @@
-<div class="outline-box">
- <html>
-  <head>
-    <title>SEARCH CONTENTS</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/custom.scss">
-  </head>
-
-  <body>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-    <div class="container text-center">
+    <div class="outline-box"> 
+     <div class="container text-center">
       <div class="row justify-content-md-center">
         <%= form_with model: Content.new, local: true do |f| %>
         <%= check_box :language, "Chinese" %>
@@ -20,42 +8,46 @@
         <%= f.label :language, "Italian", class: "italian" %>
       </div>
         
-      <div class="container text-center">  
-        <%= f.check_box :media_keyword, {}, :film, nil %>
+       <div class="container text-center">  
+        <%= f.check_box :media_keyword, {}, :film%>
         <%= f.label :media_keyword, "映画", class: "film" %>
         <%= f.check_box :media_keyword, {}, :quote%>
-        <%= f.label :media_keyword, "名言", class: "quate" %>
+        <%= f.label :media_keyword, "名言", class: "quote" %>
         <%= f.check_box :media_keyword, {}, :poetry%>
         <%= f.label :media_keyword, "詩", class: "poetry" %>
         <%= f.check_box :media_keyword, {}, :lyric, nil %>
         <%= f.label :media_keyword, "歌詞", class: "lyric" %>
-      </div>
-
       
-      <%= f.submit "検索", class: "btn-white" %>
-    <% end %>
+        <%= f.submit "検索", class: "btn-white" %>
+     <% end %>
+      </div>
     </div>
         
-        <div class="row">
-          <div class="col">
-            <tbody>
-              <% @results.each do |results| %>
-              <br><%= result.language %></br>
-              <br><%= result.media %></br>
-              </div>
-              
-              <% end %>
-            </tbody>
+          <div class="cernter-block">
+            <div style="padding: 15px">
+                <div class="col-xs-6 text-center">
+                <%= form_with model: Content.new, local: true do |f| %>
+                <%= f.check_box :title_name, {}, :title1, nil %>
+                <%= f.label :title_name, "タイトル１", class: "title1" %>
+                <%= f.check_box :title_name, {}, :title2%>
+                <%= f.label :title_name, "タイトル２", class: "title2" %>
             
+                
+                <%= f.submit "検索", class: "btn-white" %>
+                <% end %>
+                </div>
+              
+          
+                <div class="col-xs-6 text-center">
+                <%= form_with model: Content.new, local: true do |f| %> 
+                <%= f.check_box :contents_name, {}, :content1, nil %>
+                <%= f.label :contents_named, "動画１", class: "content1" %>
+                <%= f.check_box :contents_name, {}, :content2%>
+                <%= f.label :contents_name, "動画２", class: "content2" %>
+                
+                <%= f.submit "検索", class: "btn-white" %>
+                <% end %>   
+                </div>
+            </div>
           </div>
-          <div class="col">
-            右
-          </div>
-        </div>
     </div>
-    
-    
-    
-  </div>
- </div>   
-</div>
