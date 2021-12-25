@@ -1,10 +1,11 @@
 class Medium < ApplicationRecord
     
   validates :admin_id, presence: true
-  validates :description, presence: true
-  validates :language, presence:true
-  validates :language, presence: true
-  validates :video, presence: true
-  validates :category, presence: true
+  
+  belongs_to :admin
+  
+  has_many :names
+  has_many :languages
+  has_many :categories
   
 end
