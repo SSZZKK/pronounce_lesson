@@ -1,0 +1,2 @@
+module Checkmydata::AdminsHelper
+end

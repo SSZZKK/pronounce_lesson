@@ -102,20 +102,33 @@ animation : scrollSample01 10s linear infinite;
   background: rgba(255,255,255,0.7);
 }
 
+// .outline-box {
+//     padding: 20px 10px;
+//     margin: 10px 20px 20px;
+//     position: relative;
+//     font-weight: bold;
+//     color: #1E90FF;
+//     background: #FFF;
+//     border: solid 10px #1E90FF;
+//     border-radius: 50px;
+//     outline: solid 3px #0066FF;
+// }
+// .outline-box p {
+//     margin: 1px 10px 10px 5px; 
+//     padding: 0;
+// }
+
 .outline-box {
-    padding: 20px 10px;
-    margin: 10px 20px 20px;
-    position: relative;
-    font-weight: bold;
-    color: #1E90FF;
-    background: #FFF;
-    border: solid 10px #1E90FF;
-    border-radius: 50px;
-    outline: solid 3px #0066FF;
+    width: 100%;
+    border:20px solid #1E90FF;
+    border-radius:20px;
+    box-sizing:border-box;
+    overflow: scroll; 
 }
+@media screen and (max-width: 767px){
 .outline-box p {
-    margin: 1px 10px 10px 5px; 
-    padding: 0;
+    border: 10px solid #47a89c;/* SP枠線の幅 */
+}
 }
 
 .Videolayout{
@@ -125,6 +138,33 @@ animation : scrollSample01 10s linear infinite;
 
 .titleindent
       {
-         text-indent: 1em;
+         text-indent: 3em;
       }
 
+.description-box {
+    position: relative;
+    padding:0.25em 1em;
+}
+.description-box9:before,.box19:after{ 
+    content:'';
+    width: 20px;
+    height: 30px;
+    position: absolute;
+    display: inline-block;
+}
+.description-box:before{
+    border-left: solid 1px #5767bf;
+    border-top: solid 1px #5767bf;
+    top:0;
+    left: 0;
+}
+.description-box:after{
+    border-right: solid 1px #5767bf;
+    border-bottom: solid 1px #5767bf;
+    bottom:0;
+    right: 0;
+}
+.description-box p {
+    margin: 0; 
+    padding: 0;
+}

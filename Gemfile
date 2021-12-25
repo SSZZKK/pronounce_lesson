@@ -71,3 +71,4 @@ gem 'bcrypt'
 gem "carrierwave"
 gem "ransack"
 gem "kaminari"
+gem 'rails_admin', '~> 2.0.0.beta'

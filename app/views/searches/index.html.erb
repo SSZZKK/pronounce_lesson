@@ -1,0 +1,29 @@
+<div class="search">
+  <div class="search-container">
+    <div class="search-left">
+      <%= search_form_for @q do |f| %>
+    </div>
+    <div class="search-right">
+      <section class="items-box-container">
+        <% if @search.present? %>
+          <h2 class="search-result-head">
+            <%= @search %>
+            <span class="search-result-head-text">
+              RESULT
+            </span>
+          </h2>
+          <div class="search-result-number">
+            <%= "1-#{@contents.count}" %>
+          </div>
+        <% else %>
+          <h2 class="search-result-nil">
+            NOTHING
+          </h2>
+        <% end %>
+        <div class="items-box-content">
+          <%= render @contents %>
+        </div>
+       <% end %>
+    </div>
+  </div>
+</div>

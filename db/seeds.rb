@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+# contents = [
+#   { description:'Nulla è più necessario del superfluo.”',
+#   video: 'video01' , medium_id: 'italian01' },
+  
+# ]
+# Content.create(contents)

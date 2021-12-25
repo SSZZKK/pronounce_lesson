@@ -3,11 +3,6 @@ class ContentsController < ApplicationController
   def index
     @contents = Content.all
   end
-    
-  def search
-    @search = Content.ransack(params[:q])
-    @results = @search.result
-  end
   
   def new
     @content = Content.new
@@ -20,12 +15,18 @@ class ContentsController < ApplicationController
       redirect_to contents_path, success: '投稿しました'
     else
       flash.now[:danger] = "投稿失敗"
-      render :news
+      render :new
     end
   end
   
+  
+  # def self.search(search)
+  #   return  Content.all unless search
+  #   Content.where(['name LIKE ?', "%#{search}%"])
+  # end
+  
   private
   def content_params
-    params.require(:content).permit(:video, :description, :language)
+    params.require(:content).permit(:video, :description, :language, :medium_id)
   end
 end
