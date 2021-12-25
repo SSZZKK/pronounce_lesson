@@ -4,6 +4,7 @@ class CreateContents < ActiveRecord::Migration[5.2]
       t.integer :admin_id
       t.string :description
       t.string :video
+      t.string :medium_id
 
       t.timestamps
     end
