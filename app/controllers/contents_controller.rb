@@ -1,9 +1,9 @@
 class ContentsController < ApplicationController
 
     def index
-      @q = Content.ransack(params[:q])
+      # @q = Content.ransack(params[:q])
       @contents = Content.all
-      @content = Contents.page(params[:page]).per(20)
+      # @content = Contents.page(params[:page]).per(20)
     end
     
     def new

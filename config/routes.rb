@@ -3,13 +3,14 @@ Rails.application.routes.draw do
   get 'sessions/new'
   get 'pages/new'
   root 'pages#index'
-  get '/italian' => 'media#course_italian'
-  get '/chinese' => 'media#course_chinese'
+  # get '/italian' => 'media#course_italian'
+  # get '/chinese' => 'media#course_chinese'
   
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
   
+  resources :media
   # resources :contents
   get 'contents'     => 'contents#index'
   get 'contents/new' => 'contents#new'

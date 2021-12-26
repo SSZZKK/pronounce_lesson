@@ -1,5 +1,9 @@
-<%= form_for(@medium, url: media_path) do |f| %>
-  <div>
-    <%= f.label :language %>
-  </div>
+language <%= params[:language] %>
+<%= link_to '映画のセリフ' ,media_path(language: params[:language], category: 'movie') %>
+<%= link_to '名言' ,media_path(language: params[:language], category: 'quote') %>
+<%= link_to '詩' ,media_path(language: params[:language], category: 'poetry') %>
+<%= link_to '歌詞' ,media_path(language: params[:language], category: 'lyric') %>
+<br>
+<% @media.each do |medium| %>
+<%= link_to medium.name, medium_path(medium) %>
 <% end %>
