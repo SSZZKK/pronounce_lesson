@@ -21,14 +21,8 @@ class ContentsController < ApplicationController
       end
     end
   
-  
-  # def self.search(search)
-  #   return  Content.all unless search
-  #   Content.where(['name LIKE ?', "%#{search}%"])
-  # end
-  
   private
   def content_params
-    params.require(:content).permit(:video, :description, :language, :medium_id)
+    params.require(:content).permit(:video, :description, :language, :category)
   end
 end

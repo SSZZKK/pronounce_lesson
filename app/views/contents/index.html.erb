@@ -1,21 +1,18 @@
-<div class="outline-box font-default" >
- <div class="top-hero-container">
+<div class="font-default" >
     <% @contents.each do |content| %>
-      <div class="row">
+     
         
-            <div class="content-text font-size:large titleindent description-box">
-              <p><%= content.description %></P>
-            </div>
-        
-        <div class="content-index-single">
-         <div class="Videolayout">
-          <%= video_tag content.video.url, size: "400x280", 
-          controls: true, muted: false %><br>
-         </div>
-            
-        </div>
-      </div>
+    <div class="font-size:large">
+      <p><%= content.description %></p>
+      <p><%= content.language %></p>
+      <p><%= content.category %></p>
     </div>
+
+     <div class="Videolayout">
+      <%= video_tag content.video.url, size: "200x140", 
+      controls: true, muted: false %><br>
+     </div>
+   
   <% end %>
  </div>
-</div>
+

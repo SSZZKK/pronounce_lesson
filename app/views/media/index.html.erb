@@ -1,43 +1,53 @@
 <div class="container font-size:bold">
-   <div class="top-hero-container">
-    <div style="font-size:xx-large">
-   <%= link_to :back do %>🔙<% end %>
-   <br><%= params[:language] %>
-   
-    <% if params[:language] == "chinese" %>
+   <div style="font-size:xx-large">
+   <%= link_to 'pages' do %>HOME<% end %>
+   <%= link_to :back do %>🔙<% end %><br>
+    
+ 
+     <div style="font-size:25px">
+      <div class="buruburu5s">
+      <% if params[:language] == "chinese" %>
       🇨🇳
-      <image_tag "kyogeki.png">
-     <% elsif params[:language] == "italian" %>
-      <image_tag "dante.png">
+      <% elsif params[:language] == "italian" %>
       🇮🇹
-     <% end %>
+      <% end %>
+      </div>
+      <% if params[:language] == "chinese" %>
+      CHINESE
+      <% elsif params[:language] == "italian" %>
+      ITALIAN
+      <% end %>
+     </div>
     </div>
-   </div>
-  
+   
    <div class="split">
-    <div class="split-item split-left">
-     <div class="split-left__inner">
-    
-    
-    
+     <div id="content">
+      <div class="split-item split-left">
+       <div id="main">
+    <b>
     <%= link_to '映画のセリフ' ,media_path(language: params[:language], category: 'movie') %><br>
     <%= link_to '名言' ,media_path(language: params[:language], category: 'quote') %><br>
     <%= link_to '詩' ,media_path(language: params[:language], category: 'poetry') %><br>
     <%= link_to '歌詞' ,media_path(language: params[:language], category: 'lyric') %><br>
-    <br>
-       
-      </div><!--split-left__inner-->
-     </div><!--split-item split-left-->
+    </b><br>
+      <% if params[:language] == "chinese" %>
+      <div class="chinese-bg-img">
+      </div>
+      <% elsif params[:language] == "italian" %>
+      <div class="italian-bg-img">
+      </div>
+      <% end %>
+        </div><!--main-->
+       </div><!--split-item split-left-->
     
    
-    <div class="split-item split-right">
-     <div class="split-right__inner">
-
-    <% @media.each do |medium| %>
-    <%= link_to medium.name, medium_path(medium) %><br>
-    <% end %>
-
-     </div><!--split-right__inner-->
-    </div><!--split-item split-right-->
-   </div><!--split-->
-  </div><!--topcontaine-->
+      <div class="split-item split-right">
+        <nav>
+        <% @media.each do |medium| %>
+        <%= link_to medium.name, medium_path(medium) %><br>
+        <% end %>
+        </nav>
+      </div><!--split-item split-right-->
+      </div><!--containt-->
+    </div><!--split-->
+</div><!--container-->

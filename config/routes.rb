@@ -11,13 +11,13 @@ Rails.application.routes.draw do
   delete '/logout',  to: 'sessions#destroy'
   
   resources :media
-  # resources :contents
-  get 'contents'     => 'contents#index'
-  get 'contents/new' => 'contents#new'
-  post 'contents' => 'contents#create'
-  get 'contents/:id/edit' => 'contents#edit'
-  patch 'contents/:id'  => 'contents#update'
-  delete 'contents/:id' => 'contents#destroy'
+  resources :contents
+  # get 'contents'     => 'contents#index'
+  # get 'contents/new' => 'contents#new'
+  # post 'contents' => 'contents#create'
+  # get 'contents/:id/edit' => 'contents#edit'
+  # patch 'contents/:id'  => 'contents#update'
+  # delete 'contents/:id' => 'contents#destroy'
   
   resources :pages
   resources :admins
