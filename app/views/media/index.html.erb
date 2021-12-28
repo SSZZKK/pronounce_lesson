@@ -30,13 +30,6 @@
     <%= link_to '詩' ,media_path(language: params[:language], category: 'poetry') %><br>
     <%= link_to '歌詞' ,media_path(language: params[:language], category: 'lyric') %><br>
     </b><br>
-      <% if params[:language] == "chinese" %>
-      <div class="chinese-bg-img">
-      </div>
-      <% elsif params[:language] == "italian" %>
-      <div class="italian-bg-img">
-      </div>
-      <% end %>
         </div><!--main-->
        </div><!--split-item split-left-->
     
