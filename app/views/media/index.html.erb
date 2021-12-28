@@ -1,9 +1,43 @@
-language <%= params[:language] %>
-<%= link_to '映画のセリフ' ,media_path(language: params[:language], category: 'movie') %>
-<%= link_to '名言' ,media_path(language: params[:language], category: 'quote') %>
-<%= link_to '詩' ,media_path(language: params[:language], category: 'poetry') %>
-<%= link_to '歌詞' ,media_path(language: params[:language], category: 'lyric') %>
-<br>
-<% @media.each do |medium| %>
-<%= link_to medium.name, medium_path(medium) %>
-<% end %>
+<div class="container font-size:bold">
+   <div class="top-hero-container">
+    <div style="font-size:xx-large">
+   <%= link_to :back do %>🔙<% end %>
+   <br><%= params[:language] %>
+   
+    <% if params[:language] == "chinese" %>
+      🇨🇳
+      <image_tag "kyogeki.png">
+     <% elsif params[:language] == "italian" %>
+      <image_tag "dante.png">
+      🇮🇹
+     <% end %>
+    </div>
+   </div>
+  
+   <div class="split">
+    <div class="split-item split-left">
+     <div class="split-left__inner">
+    
+    
+    
+    <%= link_to '映画のセリフ' ,media_path(language: params[:language], category: 'movie') %><br>
+    <%= link_to '名言' ,media_path(language: params[:language], category: 'quote') %><br>
+    <%= link_to '詩' ,media_path(language: params[:language], category: 'poetry') %><br>
+    <%= link_to '歌詞' ,media_path(language: params[:language], category: 'lyric') %><br>
+    <br>
+       
+      </div><!--split-left__inner-->
+     </div><!--split-item split-left-->
+    
+   
+    <div class="split-item split-right">
+     <div class="split-right__inner">
+
+    <% @media.each do |medium| %>
+    <%= link_to medium.name, medium_path(medium) %><br>
+    <% end %>
+
+     </div><!--split-right__inner-->
+    </div><!--split-item split-right-->
+   </div><!--split-->
+  </div><!--topcontaine-->
