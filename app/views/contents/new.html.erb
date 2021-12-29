@@ -7,21 +7,18 @@
         
       
           <%= form_with(model: @content, local: true) do |form| %>
+          <%= form.hidden_field :medium_id %>
           <div class="form-group">
             <%= form.file_field :video %>
           </div>  
           
           <div class="form-group">
-            <%= form.radio_button :language, :chinese %>
-            <%= form.label :language, "中国語",
-            {value: :chinese, style: "display: inline-block;"} %>
-            <%= form.radio_button :language, :italian %>
-            <%= form.label :language, "イタリア語",
-            {value: :italian, style: "display: inline-block;"} %>
+             <%= @medium.language %>
+             <%= @medium.category %>
           </div>
 
           <div class="form-group">
-            <%= form.label :description, "descriotion" %>
+            <%= form.label :description, "description" %>
             <%= form.text_area :description, class: 'form-control' %>
           </div>
 

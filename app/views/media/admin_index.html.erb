@@ -1,0 +1,14 @@
+<div></div>
+==========================
+<div class = "medium">
+    <% @media.each do |medium| %>
+    <%= link_to medium.name, media_admin_index_path(medium_id: medium.id) %><br>
+    <% end %>
+</div>
+==========================
+<div class = "content">
+    <% @contents.each do |content| %>
+    <%= link_to content.description, content_path(content) %>
+    <% end %>
+    <%= link_to "登録", contents_new_path(medium_id: params[:medium_id]) %>
+</div>

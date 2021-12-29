@@ -9,11 +9,13 @@ Rails.application.routes.draw do
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
-  
-  resources :media
+  get "media/admin_index", to: "media#admin_index"
+  get "media/admin_show", to: "media#admin_show"
+  resources :media do
+  end
   resources :contents
   # get 'contents'     => 'contents#index'
-  # get 'contents/new' => 'contents#new'
+  # get 'contents/new' =>s 'contents#new'
   # post 'contents' => 'contents#create'
   # get 'contents/:id/edit' => 'contents#edit'
   # patch 'contents/:id'  => 'contents#update'
