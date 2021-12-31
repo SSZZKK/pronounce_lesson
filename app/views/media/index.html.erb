@@ -2,9 +2,8 @@
    <div style="font-size:xx-large">
    <%= link_to 'pages' do %>HOME<% end %>
    <%= link_to :back do %>🔙<% end %><br>
-    
- 
-     <div style="font-size:25px">
+   
+   <div style="font-size:25px">
       <div class="buruburu5s">
       <% if params[:language] == "chinese" %>
       🇨🇳
@@ -20,6 +19,7 @@
      </div>
     </div>
    
+   
    <div class="split">
      <div id="content">
       <div class="split-item split-left">
@@ -30,18 +30,18 @@
     <%= link_to '詩' ,media_path(language: params[:language], category: 'poetry') %><br>
     <%= link_to '歌詞' ,media_path(language: params[:language], category: 'lyric') %><br>
     </b><br>
-        </div><!--main-->
-       </div><!--split-item split-left-->
+       </div><!--main-->
+      </div><!--split-item split-left-->
     
    
       <div class="split-item split-right">
-        <nav>
+      <nav>
         <% @media.each do |medium| %>
         <%= link_to medium.name, medium_path(medium) %><br>
         <% end %>
-        </nav>
+      </nav>
       </div><!--split-item split-right-->
-      
       </div><!--containt-->
     </div><!--split-->
+    
 </div><!--container-->

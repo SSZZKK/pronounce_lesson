@@ -1,0 +1,32 @@
+<div class="container font-size:bold">
+   <div style="font-size:xx-large">
+   <%= link_to 'pages' do %>HOME<% end %>
+   <%= link_to :back do %>🔙<% end %><br>
+   <div style="font-size:25px">
+     <br>
+   </div>
+   
+   <div class="split">
+     <div id="content">
+      <div class="split-item split-left">
+       <div id="main">
+    <b>
+        <% @contents.each do |content| %>
+        <%= content.sescription %><br>
+        <% end %>
+    </b><br>
+       </div><!--main-->
+      </div><!--split-item split-left-->
+    
+   
+      <div class="split-item split-right">
+      <nav>
+        <% @contents.each do |content| %>
+        <%= content.sescription %><br>
+        <% end %>
+      </nav>
+      </div><!--split-item split-right-->
+      </div><!--containt-->
+    </div><!--split-->
+    
+</div><!--container-->

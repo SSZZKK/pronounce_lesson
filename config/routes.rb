@@ -25,9 +25,5 @@ Rails.application.routes.draw do
   resources :admins
   resources :media
   resources :uploads
-  
-  # 検索機能
-  resources :searches
-  # ,only:[:index]
 
 end

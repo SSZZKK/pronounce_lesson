@@ -72,3 +72,4 @@ gem "carrierwave"
 gem "ransack"
 gem "kaminari"
 gem 'rails_admin', '~> 2.0.0.beta'
+gem 'sqlite3', '1.3.13'
