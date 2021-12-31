@@ -12,7 +12,7 @@
        <div id="main">
     <b>
         <% @contents.each do |content| %>
-        <%= content.sescription %><br>
+        <%= content.description %><br>
         <% end %>
     </b><br>
        </div><!--main-->
@@ -22,7 +22,7 @@
       <div class="split-item split-right">
       <nav>
         <% @contents.each do |content| %>
-        <%= content.sescription %><br>
+        <%= link_to content.description, content_path(content) %><br>
         <% end %>
       </nav>
       </div><!--split-item split-right-->

@@ -6,13 +6,15 @@ class MediaController < ApplicationController
     end
     
     def show
-    @contents = Content.find(description: params[:description])
+    @medium = Medium.find(params[:id])
+    @contents = @medium.contents
     end
-    #1231
+    
     
     
     def admin_index
-    @media = Medium.all
+    @q = Medium.ransack(params[:q])
+    @media = @q.result(distinct: true)
     @contents = Content.where(medium_id: params[:medium_id])
     end
     

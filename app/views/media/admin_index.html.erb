@@ -1,20 +1,22 @@
-<div>ransack</div>
+<div>ransack
 
-  <!--< %= search_form_for @search, media_path do |f| %>-->
-  <!--  < %= form.text_field :name_cont %>-->
-  <!--  < %= form.submit '送信', class: "btn-white" %>-->
+  <!--< %= search_form_for @q, media_admin_index_path do |f| %>-->
+  <!--  < %= f.text_field :name_cont %>-->
+  <!--  < %= f.submit '送信', class: "btn-white" %>-->
   <!--< % end %>-->
-    
+</div>    
 ==========================
-<div class = "medium">
-    <% @media.each do |medium| %>
-    <%= link_to medium.name, media_admin_index_path(medium_id: medium.id) %><br>
-    <% end %>
-</div>
-==========================
-<div class = "content">
-    <% @contents.each do |content| %>
-    <%= link_to content.description, content_path(content) %>
-    <% end %>
-    <%= link_to "登録", contents_new_path(medium_id: params[:medium_id]) %>
-</div>
+<div class ="row">
+  <div class = "medium col-md-6">
+      <% @media.each do |medium| %>
+      <%= link_to medium.name, media_admin_index_path(medium_id: medium.id) %><br>
+      <% end %>
+  </div>
+  ==========================
+  <div class = "content col-md-6">
+      <% @contents.each do |content| %>
+      <%= link_to content.description, content_path(content) %>
+      <% end %>
+      <%= link_to "登録", contents_new_path(medium_id: params[:medium_id]) %>
+  </div>
+</div>  

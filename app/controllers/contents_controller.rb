@@ -10,6 +10,10 @@ class ContentsController < ApplicationController
       @medium = Medium.find(params[:medium_id])
       @content = @medium.contents.build
     end
+    
+    def show
+      @content = Content.find(params[:id])
+    end
   
     def create
       @content = current_admin.contents.new(content_params)
